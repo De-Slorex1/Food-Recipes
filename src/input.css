@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+    @apply rounded-full py-1 px-2 uppercase font-bold cursor-pointer tracking-wider text-sm
+}
+
+.product-container svg {
+    @apply text-2xl text-blue-500 ml-4 mr-4 cursor-pointer
+} 
+.wrap {
+    @apply flex items-center my-8 px-1 justify-around font-bold
+}
+.product {
+    @apply flex mr-0 items-center
+}
+.price {
+    @apply flex  mr-0
+}
+.quantity {
+    @apply flex items-center
+}
+.quantity span {
+    @apply mx-4
+}
+.img {
+    @apply w-20 h-20 mx-6 rounded-md
+}
+.cont {
+    width: 700px;
+}
+.modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: .5s ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 900px;
+    max-width: 80%;
+}
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+.modal_header {
+    padding: 10px 15px;
+    display: block;
+}
+.modal_header .close_btn {
+    width: 100%;
+    border-radius: 50%;
+    padding: 0px 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 900;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+.modal_body {
+    padding: 15px 20px;
+}
+#overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    pointer-events: none;
+    transition: .5s ease-in-out;
+}
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+.remove_btn {
+    background-color: red;
+    padding: 0px 5px;
+    font-weight: 800;
+    border-radius: 60%;
+    font-size: 16px;
+}
